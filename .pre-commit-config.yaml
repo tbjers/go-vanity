@@ -1,0 +1,53 @@
+---
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+ci:
+  autofix_prs: true
+  skip:
+    - ggshield
+
+repos:
+  - repo: https://github.com/norwoodj/helm-docs
+    rev: v1.11.0
+    hooks:
+      - id: helm-docs-built
+        args:
+          - --template-files=./ci/README.md.gotmpl
+
+  - repo: https://github.com/scop/pre-commit-shfmt
+    rev: v3.6.0-1
+    hooks:
+      - id: shfmt
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-executables-have-shebangs
+      - id: check-merge-conflict
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.28.0
+    hooks:
+      - id: yamllint
+        language_version: python3
+
+  - repo: https://github.com/jumanjihouse/pre-commit-hooks
+    rev: 3.0.0
+    hooks:
+      - id: markdownlint
+
+  - repo: https://github.com/shellcheck-py/shellcheck-py
+    rev: v0.9.0.2
+    hooks:
+      - id: shellcheck
+
+  - repo: https://github.com/gitguardian/ggshield
+    rev: v1.14.2
+    hooks:
+      - id: ggshield
+        language_version: python3
+        stages: [commit]
