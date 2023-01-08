@@ -1,0 +1,8 @@
+:2015
+
+root * site
+file_server
+templates
+encode zstd gzip
+
+rewrite * /index.html

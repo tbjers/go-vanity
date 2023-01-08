@@ -1,0 +1,14 @@
+{{- $pathParts := splitList "/" .OriginalReq.URL.Path -}}
+{{- $packageName := (slice $pathParts 1 | first) -}}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="go-import" content="{{env "VANITY_DOMAIN"}}/{{$packageName}} git https://github.com/{{env "VANITY_GITHUB_ORG"}}/{{$packageName}}">
+    <meta name="go-source" content="{{env "VANITY_DOMAIN"}}/{{$packageName}} https://github.com/{{env "VANITY_GITHUB_ORG"}}/{{$packageName}} https://github.com/{{env "VANITY_GITHUB_ORG"}}/{{$packageName}}/tree/{{env "VANITY_GIT_BRANCH"}}{/dir} https://github.com/{{env "VANITY_GITHUB_ORG"}}/{{$packageName}}/blob/{{env "VANITY_GIT_BRANCH"}}{/dir}/{file}#L{line}">
+    <!-- <meta http-equiv="refresh" content="0; url=https://pkg.go.dev/{{env "VANITY_GO_TEAM"}}/{{$packageName}}/"> -->
+  </head>
+  <body>
+    Nothing to see here; <a href="https://pkg.go.dev/{{env "VANITY_GO_TEAM"}}/{{$packageName}}/">see the package on godoc</a>.
+  </body>
+</html>
