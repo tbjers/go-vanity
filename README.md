@@ -13,6 +13,28 @@ Configuration is very straightforward with only a few environment variables.
 | `VANITY_GITHUB_ORG` | `""`          | Name of GitHub user or organization  |
 | `VANITY_GIT_BRANCH` | `"main"`      | Branch name for GitHub URLs          |
 
+## Run Docker image
+
+Create and run a container like this:
+
+```sh
+docker run -d -p 2015:2015 \
+  -eVANITY_DOMAIN=go.example.com \
+  -eVANITY_GITHUB_ORG=tbjers \
+  -eVANITY_GIT_BRANCH=main \
+  ghcr.io/tbjers/go-vanity:main
+```
+
+Replace `-d` with `--rm` to test the container and clean up afterwards.
+
+## Confirm redirection works
+
+Based on the above configuration, the url for the package `my-package` would be:
+
+```sh
+go get go.example.com/my-package
+```
+
 ## License
 
 The MIT License (MIT)
