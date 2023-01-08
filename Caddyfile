@@ -1,8 +1,7 @@
-:2015
-
-root * site
-file_server
-templates
-encode zstd gzip
-
-rewrite * /index.html
+:2015 {
+	root * /usr/share/caddy
+	file_server
+	templates
+	encode zstd gzip
+	rewrite * /index.html
+}
