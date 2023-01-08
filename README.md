@@ -1,5 +1,7 @@
 # go-vanity
 
+[![Docker](https://github.com/tbjers/go-vanity/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/tbjers/go-vanity/actions/workflows/docker-publish.yml)
+
 Simple Caddy-powered site that redirects a vanity domain to GitHub repositories.
 Utilizes a template to render a simple page with the relevant meta tags.
 
