@@ -1,7 +1,7 @@
 # go-vanity
 
-![Docker](https://img.shields.io/github/actions/workflow/status/tbjers/go-vanity/docker-publish.yml)
-![License](https://img.shields.io/github/license/tbjers/go-vanity)
+[![Docker](https://img.shields.io/github/actions/workflow/status/tbjers/go-vanity/docker-publish.yml)](https://github.com/tbjers/go-vanity/actions/workflows/docker-publish.yml)
+[![License](https://img.shields.io/github/license/tbjers/go-vanity)](https://github.com/tbjers/go-vanity/blob/main/LICENSE)
 
 Simple Caddy-powered site that redirects a vanity domain to GitHub repositories.
 Utilizes a template to render a simple page with the relevant meta tags.
