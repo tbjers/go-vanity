@@ -12,3 +12,7 @@ indent_style = space
 
 [{Caddyfile,go.sum,go.mod,*.go}]
 indent_style = tab
+
+[*.{js,ts}]
+indent_style = space
+trim_trailing_whitespace = true

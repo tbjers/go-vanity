@@ -1,0 +1,9 @@
+name = "go-vanity"
+main = "src/index.ts"
+compatibility_date = "2023-03-04"
+routes = [
+  { pattern = "go.zerostash.dev", custom_domain = true, zone_name = "zerostash.dev" }
+]
+
+[build]
+command = "npm run build"
