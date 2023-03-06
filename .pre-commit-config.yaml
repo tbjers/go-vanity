@@ -30,7 +30,7 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/adrienverge/yamllint
-    rev: v1.28.0
+    rev: v1.29.0
     hooks:
       - id: yamllint
         language_version: python3
@@ -46,7 +46,7 @@ repos:
       - id: shellcheck
 
   - repo: https://github.com/gitguardian/ggshield
-    rev: v1.14.2
+    rev: v1.14.4
     hooks:
       - id: ggshield
         language_version: python3
