@@ -15,7 +15,7 @@ repos:
           - --template-files=./ci/README.md.gotmpl
 
   - repo: https://github.com/scop/pre-commit-shfmt
-    rev: v3.6.0-1
+    rev: v3.6.0-2
     hooks:
       - id: shfmt
 
@@ -30,7 +30,7 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/adrienverge/yamllint
-    rev: v1.29.0
+    rev: v1.30.0
     hooks:
       - id: yamllint
         language_version: python3
@@ -46,7 +46,7 @@ repos:
       - id: shellcheck
 
   - repo: https://github.com/gitguardian/ggshield
-    rev: v1.14.4
+    rev: v1.14.5
     hooks:
       - id: ggshield
         language_version: python3
